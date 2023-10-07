@@ -45,3 +45,39 @@ const bigNumber = 89489979287355n
     // Object => "object"
     // Object => "function"
 
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+// Stack & Heap Memory
+// Stack(Primitive) :=> Declared variables ki copy milti h 
+// Heap(Non-Primitive) :=>  Reference(Change original value me hojayegi)
+
+let myYouTubeName = "Targetfuturem"
+
+let anothername = myYouTubeName
+console.log(anothername)
+    //  here, stack se variable(myYouTubeName) ki value copy hokar - anothername me aa gyi h
+   
+    //  now change the value of anothername then check the value of (myYouTubeName & anothervalue)
+
+    anothername = "MubarakFitness"
+ console.log(myYouTubeName);
+ console.log(anothername);
+
+//  what happen in heap memory (Non-Primitive)
+
+let SaneAlam = {
+    email:"sane@microsoft.com",
+    phoneNo: "x-y-z",
+}
+
+let Mubarak = SaneAlam
+
+Mubarak.email = "mubarak@amazon.com"
+// lets see the email results of SaneAlam & Mubarak😊😊
+
+console.log(SaneAlam.email);
+console.log(Mubarak.email);
+
+// here in heap memory "sane@microsoft.com" change into "mubarak@amazon.com"
+// thus reference is takes place & both user get the same email :- Notes for Self👍😎
+// we get the copy in Stack but in heap we get the reference
